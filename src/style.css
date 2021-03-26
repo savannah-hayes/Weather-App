@@ -1,12 +1,10 @@
 h1,
-#time,
-#date,
+.date-format,
 .weather-conditions {
   color: #878787;
 }
 
-#time,
-#date,
+.date-format,
 .weather-conditions {
   list-style: none;
   font-size: 16px;

@@ -10,6 +10,7 @@
       integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
       crossorigin="anonymous"
     />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
     <title>Weather App</title>
   </head>
@@ -19,29 +20,38 @@
         <div class="weather-app">
           <div class="row">
             <div class="col-4">
-              <h1>San Francisco</h1>
+              <h1 id="city">San Francisco</h1>
               <ul>
-                <li>Sunday 10:41</li>
-                <li>March 2, 2021</li>
+                <li id="time">Sunday 10:41</li>
+                <li id="date">March 2, 2021</li>
               </ul>
-            </div>
-            <div class="col-4 weather-wrapper">
-              <img
-                src="https://ssl.gstatic.com/onebox/weather/48/cloudy.png"
-                alt="cloudy"
-              />
-              <span class="weather-temperature">
-                <strong>19</strong>
-              </span>
-              <span class="weather-units"
-                >°C | <a href="#" class="units-link">°F</a></span
-              >
             </div>
             <div class="col-4">
               <ul>
-                <li>Wind: 3km/h</li>
-                <li>Humidity: 69%</li>
-                <li>Pressure: 1002 hPa</li>
+                <li id="temperature-unit">
+                  <img
+                    src="https://ssl.gstatic.com/onebox/weather/48/cloudy.png"
+                    alt="cloudy"
+                  />
+                  <strong id="temperature">19</strong>
+                  <span id="celsius-link"
+                    >°C | <a href="#" id="fahrenheit-link">°F</a></span
+                  >
+                </li>
+                <li id="temperature-description">Clear</li>
+              </ul>
+            </div>
+            <div class="col-4">
+              <ul>
+                <li class="weather-conditions">
+                  Wind: <span id="wind"></span> km/h
+                </li>
+                <li class="weather-conditions">
+                  Humidity: <span id="humidity"></span> %
+                </li>
+                <li class="weather-conditions">
+                  Pressure: <span id="pressure"></span> hPa
+                </li>
               </ul>
             </div>
           </div>

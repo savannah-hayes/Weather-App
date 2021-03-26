@@ -36,12 +36,10 @@ function displayTemperature(response) {
   humidityElement.innerHTML = response.data.main.humidity;
   pressureElement.innerHTML = response.data.main.pressure;
   timeElement.innerHTML = formatDate(response.data.dt * 1000);
-  console.log(response.data);
 }
 let apiKey = "97a509323a282fbb09c0bc8556148a31";
 let city = "New York";
 let units = "metric";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
-console.log(apiUrl);
 
 axios.get(apiUrl).then(displayTemperature);

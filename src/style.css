@@ -27,10 +27,27 @@ li {
   padding: 0;
 }
 
-.weather-app {
+.weather-app-wrapper {
   max-width: 600px;
   margin: 30px auto;
+}
+
+.weather-app {
   padding: 20px;
   border-radius: 5px;
   border: 1px solid #dadde1;
+}
+
+.weather-temperature {
+  font-size: 30px;
+}
+
+.weather-units {
+  position: relative;
+  top: -10px;
+  font-size: 14px;
+}
+
+.units-link {
+  text-decoration: none;
 }

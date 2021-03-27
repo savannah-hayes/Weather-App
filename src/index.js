@@ -29,6 +29,7 @@ function displayTemperature(response) {
   let humidityElement = document.querySelector("#humidity");
   let pressureElement = document.querySelector("#pressure");
   let timeElement = document.querySelector("#time");
+  let iconElement = document.querySelector("#icon");
   temperatureElemement.innerHTML = Math.round(response.data.main.temp);
   cityElement.innerHTML = response.data.name;
   descriptionElement.innerHTML = response.data.weather[0].description;
@@ -36,6 +37,11 @@ function displayTemperature(response) {
   humidityElement.innerHTML = response.data.main.humidity;
   pressureElement.innerHTML = response.data.main.pressure;
   timeElement.innerHTML = formatDate(response.data.dt * 1000);
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 let apiKey = "97a509323a282fbb09c0bc8556148a31";
 let city = "New York";

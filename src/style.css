@@ -45,6 +45,25 @@ ul {
   border: 1px solid #dadde1;
 }
 
+#search-form {
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+#city-input {
+  width: 300px;
+  display: block;
+  margin: 0 auto;
+}
+
+#search-button {
+  width: 80px;
+  margin-left: -60px;
+  border-color: transparent;
+  color: white;
+  background-color: #1168da;
+}
+
 #temperature {
   font-size: 30px;
   margin-right: -3px;

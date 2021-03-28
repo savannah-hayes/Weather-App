@@ -45,6 +45,11 @@ ul {
   border: 1px solid #dadde1;
 }
 
+.weather-temperature .active {
+  color: rgb(33, 33, 33);
+  cursor: default;
+}
+
 #search-form {
   margin-bottom: 15px;
   margin-top: 15px;
@@ -69,13 +74,11 @@ ul {
   margin-right: -3px;
 }
 
-#celsius-link {
+#celsius-link,
+#fahrenheit-link {
   position: relative;
   top: -10px;
   font-size: 14px;
-}
-
-#fahrenheit-link {
   text-decoration: none;
 }
 

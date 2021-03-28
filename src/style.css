@@ -51,7 +51,7 @@ ul {
 }
 
 #search-form {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   margin-top: 15px;
 }
 
@@ -88,4 +88,36 @@ ul {
   justify-content: center;
   margin-top: -10px;
   text-transform: capitalize;
+}
+
+.weather-forecast {
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.weather-forecast h3 {
+  color: rgb(186, 186, 186);
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  height: 15px;
+  line-height: 15px;
+  padding-top: 7px;
+}
+
+.weather-forecast img {
+  display: block;
+  margin: 0 auto;
+  height: 48px;
+  width: 48px;
+}
+
+.weather-forecast-temperature {
+  text-align: center;
+  color: rgb(135, 135, 135);
+  font-size: 14px;
+  font-weight: 400;
+  height: auto;
+  line-height: 15px;
+  white-space: nowrap;
 }

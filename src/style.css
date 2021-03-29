@@ -1,5 +1,5 @@
 .date-format,
-.weather-conditions {
+.weather-description {
   list-style: none;
   font-size: 16px;
   height: 18px;
@@ -50,7 +50,21 @@ body {
 }
 
 .weather-temperature .active {
+  color: rgb(135, 135, 135);
   cursor: default;
+}
+
+.weather-conditions {
+  text-align: right;
+  margin-top: 40px;
+}
+
+.weather-temperature {
+  margin-top: 40px;
+}
+
+#city {
+  margin-bottom: 20px;
 }
 
 #github-link {

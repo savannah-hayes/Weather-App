@@ -37,6 +37,7 @@
             <div class="col-4">
               <h1 id="city">San Francisco</h1>
               <ul>
+                <li class="date-format">Last updated:</li>
                 <li class="date-format" id="time"></li>
                 <li class="date-format" id="date">March 2, 2021</li>
               </ul>
@@ -54,82 +55,21 @@
                 <li id="temperature-description"></li>
               </ul>
             </div>
-            <div class="col-4">
+            <div class="col-4 weather-conditions">
               <ul>
-                <li class="weather-conditions">
+                <li class="weather-description">
                   Wind: <span id="wind"></span> km/h
                 </li>
-                <li class="weather-conditions">
+                <li class="weather-description">
                   Humidity: <span id="humidity"></span> %
                 </li>
-                <li class="weather-conditions">
+                <li class="weather-description">
                   Pressure: <span id="pressure"></span> hPa
                 </li>
               </ul>
             </div>
           </div>
-          <div class="row weather-forecast">
-            <div class="col-2">
-              <h3>Sun</h3>
-              <img
-                src="https://ssl.gstatic.com/onebox/weather/48/partly_cloudy.png"
-                alt=""
-              />
-              <div class="weather-forecast-temperature">
-                <strong>22°</strong> 17°
-              </div>
-            </div>
-            <div class="col-2">
-              <h3>Mon</h3>
-              <img
-                src="https://ssl.gstatic.com/onebox/weather/48/partly_cloudy.png"
-                alt=""
-              />
-              <div class="weather-forecast-temperature">
-                <strong>22°</strong> 17°
-              </div>
-            </div>
-            <div class="col-2">
-              <h3>Tue</h3>
-              <img
-                src="https://ssl.gstatic.com/onebox/weather/48/partly_cloudy.png"
-                alt=""
-              />
-              <div class="weather-forecast-temperature">
-                <strong>22°</strong> 17°
-              </div>
-            </div>
-            <div class="col-2">
-              <h3>Wed</h3>
-              <img
-                src="https://ssl.gstatic.com/onebox/weather/48/partly_cloudy.png"
-                alt=""
-              />
-              <div class="weather-forecast-temperature">
-                <strong>22°</strong> 17°
-              </div>
-            </div>
-            <div class="col-2">
-              <h3>Thu</h3>
-              <img
-                src="https://ssl.gstatic.com/onebox/weather/48/partly_cloudy.png"
-                alt=""
-              />
-              <div class="weather-forecast-temperature">
-                <strong>22°</strong> 17°
-              </div>
-            </div>
-            <div class="col-2">
-              <h3>Fri</h3>
-              <img
-                src="https://ssl.gstatic.com/onebox/weather/48/partly_cloudy.png"
-                alt=""
-              />
-              <div class="weather-forecast-temperature">
-                <strong>22°</strong> 17°
-              </div>
-            </div>
-          </div>
+          <div class="row weather-forecast" id="forecast"></div>
         </div>
       </div>
       <div id="github-link">

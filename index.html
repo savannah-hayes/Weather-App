@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@300&display=swap"
+      rel="stylesheet"
+    />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -18,6 +23,16 @@
     <div class="container">
       <div class="weather-app-wrapper">
         <div class="weather-app">
+          <div class="city-buttons">
+            <button class="recent-cities" id="sf-button">San Francsico</button>
+            <button class="recent-cities" id="tokyo-button">Tokyo</button>
+            <button class="recent-cities" id="melbourne-button">
+              Melbourne
+            </button>
+            <button class="recent-cities" id="paris-button">Paris</button>
+            <button class="recent-cities" id="sao-button">São Paulo</button>
+            <button class="recent-cities" id="lisbon-button">lisbon</button>
+          </div>
           <form id="search-form">
             <div class="row">
               <div class="col-9">
@@ -35,7 +50,7 @@
           </form>
           <div class="row">
             <div class="col-4">
-              <h1 id="city">San Francisco</h1>
+              <h1 id="city"></h1>
               <ul>
                 <li class="date-format">Last updated:</li>
                 <li class="date-format" id="time"></li>
@@ -45,7 +60,6 @@
             <div class="col-4 weather-temperature">
               <ul>
                 <li id="temperature-unit">
-                  <img width="55" src="" alt="" id="icon" />
                   <strong id="temperature"></strong>
                   <span class="units">
                     <a href="#" id="celsius-link" class="active">°C |</a>
@@ -53,10 +67,15 @@
                   >
                 </li>
                 <li id="temperature-description"></li>
+                <img width="55" src="" alt="" id="icon" />
               </ul>
             </div>
             <div class="col-4 weather-conditions">
               <ul>
+                <li class="weather-description">
+                  Feels like: <span id="feels-link"></span> °
+                </li>
+                <br />
                 <li class="weather-description">
                   Wind: <span id="wind"></span> km/h
                 </li>

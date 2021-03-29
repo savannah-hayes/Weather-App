@@ -14,7 +14,7 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Barlow", sans-serif;
 }
 
 h1 {
@@ -28,10 +28,18 @@ ul {
   padding: 0;
 }
 
+.recent-cities {
+  border: none;
+  background-color: transparent;
+  padding: 15px 10px 1px 5px;
+  margin-right: 10px;
+  margin-left: 5px;
+}
+
 body {
   background-image: url("https://i.pinimg.com/564x/ee/c4/16/eec4169c5e89189f59d86f21829e0454.jpg");
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: 100% 115%;
   background-attachment: fixed;
 }
 
@@ -39,7 +47,7 @@ body {
   max-width: 600px;
   margin: 30px auto;
   background-color: white;
-  opacity: 0.8;
+  opacity: 0.6;
   border-radius: 25px;
 }
 
@@ -50,17 +58,23 @@ body {
 }
 
 .weather-temperature .active {
-  color: rgb(135, 135, 135);
   cursor: default;
 }
 
 .weather-conditions {
   text-align: right;
-  margin-top: 40px;
+  margin-top: 25px;
 }
 
 .weather-temperature {
-  margin-top: 40px;
+  margin-top: -10px;
+  border: 2px solid grey;
+  opacity: 0.9;
+  text-align: center;
+  color: black;
+  border-radius: 50%;
+  width: 165px;
+  height: 165px;
 }
 
 #city {
@@ -74,7 +88,7 @@ body {
 
 #search-form {
   margin-bottom: 30px;
-  margin-top: 15px;
+  margin-top: 25px;
 }
 
 #city-input {
@@ -96,6 +110,10 @@ body {
   margin-right: -3px;
 }
 
+#temperature-unit {
+  margin-top: 12px;
+}
+
 #celsius-link,
 #fahrenheit-link {
   position: relative;
@@ -105,11 +123,14 @@ body {
 }
 
 #temperature-description {
-  font-size: 18px;
+  font-size: 15px;
   display: flex;
   justify-content: center;
-  margin-top: -10px;
-  text-transform: capitalize;
+  margin-top: 10px;
+}
+
+#temperature-description:first-letter {
+  text-transform: uppercase;
 }
 
 .weather-forecast {

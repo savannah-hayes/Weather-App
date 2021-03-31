@@ -20,7 +20,6 @@ body {
 h1 {
   font-size: 24px;
   line-height: 28px;
-  margin-bottom: 0px;
 }
 
 ul {
@@ -59,6 +58,7 @@ body {
 
 .weather-temperature .active {
   cursor: default;
+  color: black;
 }
 
 .weather-conditions {
@@ -77,8 +77,9 @@ body {
   height: 165px;
 }
 
-#city {
-  margin-bottom: 20px;
+.hour-forecast {
+  font-weight: 900;
+  margin-bottom: -25px;
 }
 
 #github-link {
@@ -107,11 +108,11 @@ body {
 
 #temperature {
   font-size: 30px;
-  margin-right: -3px;
+  margin-right: -1px;
 }
 
 #temperature-unit {
-  margin-top: 12px;
+  margin-top: 15px;
 }
 
 #celsius-link,

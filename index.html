@@ -4,25 +4,36 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Barlow:wght@300&display=swap"
-      rel="stylesheet"
-    />
+    <!--Font awesome-->
+    <script
+      src="https://kit.fontawesome.com/6de984ddb1.js"
+      crossorigin="anonymous"
+    ></script>
+    <!--Bootstrap-->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
       crossorigin="anonymous"
     />
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <!--Axios-->
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!--CSS file-->
     <link rel="stylesheet" href="src/style.css" />
     <title>Weather App</title>
   </head>
   <body>
+    <!--Weather App-->
     <div class="container">
       <div class="weather-app-wrapper">
         <div class="weather-app">
+          <!--Recent cities buttons-->
           <div class="city-buttons">
             <button class="recent-cities" id="sf-button">San Francsico</button>
             <button class="recent-cities" id="tokyo-button">Tokyo</button>
@@ -33,6 +44,7 @@
             <button class="recent-cities" id="sao-button">São Paulo</button>
             <button class="recent-cities" id="lisbon-button">lisbon</button>
           </div>
+          <!--Search Engine-->
           <form id="search-form">
             <div class="row">
               <div class="col-9">
@@ -43,6 +55,7 @@
                   autocomplete="off"
                 />
               </div>
+              <!--Search button-->
               <div class="col-3">
                 <input type="submit" value="search" id="search-button" />
               </div>
@@ -50,12 +63,15 @@
           </form>
           <div class="row">
             <div class="col-4">
+              <!--Name of city and country-->
               <h1 id="city"></h1>
+              <!--Current date and time-->
               <ul>
                 <li class="date-format">Local time:</li>
                 <li class="date-format" id="date"></li>
               </ul>
             </div>
+            <!--Temperature units-->
             <div class="col-4 weather-temperature">
               <ul>
                 <li id="temperature-unit">
@@ -65,14 +81,16 @@
                     <a href="#" id="fahrenheit-link">°F</a></span
                   >
                 </li>
+                <!--Current weather description-->
                 <li id="temperature-description"></li>
                 <img width="55" src="" alt="" id="icon" />
               </ul>
             </div>
+            <!--Weather descriptions-->
             <div class="col-4 weather-conditions">
               <ul>
                 <li class="weather-description">
-                  Feels like: <span id="feels-like"></span> °
+                  Feels like: <span id="feels-like"></span>°
                 </li>
                 <li class="weather-description">
                   Wind: <span id="wind"></span> km/h
@@ -86,10 +104,12 @@
               </ul>
             </div>
           </div>
-          <div class="hour-forecast">3-Hour Forecast</div>
+          <!--3-Hour forecast section-->
+          <div class="hour-forecast">Daily Forecast</div>
           <div class="row weather-forecast" id="forecast"></div>
         </div>
       </div>
+      <!--Footer-->
       <div id="github-link">
         <small>
           <a

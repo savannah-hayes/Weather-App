@@ -74,15 +74,7 @@ function formatHours(timestamp) {
 function formatDay(timestamp) {
   let date = new Date(timestamp);
   let day = date.getDay();
-  let days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
   return days[day];
 }
@@ -195,6 +187,24 @@ function displayWeatherCondition(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
+
+  let forecastImage = document.querySelector(".weather-temperature");
+  let weatherID = response.data.weather[0].id;
+  if (weatherID >= 200 && weatherID < 300) {
+    forecastImage.style.backgroundImage = "url(images/thunder.png)";
+  } else if (weatherID >= 300 && weatherID < 500) {
+    forecastImage.style.backgroundImage = "url(images/drizzle.png)";
+  } else if (weatherID >= 500 && weatherID < 600) {
+    forecastImage.style.backgroundImage = "url(images/rain.png)";
+  } else if (weatherID >= 600 && weatherID < 700) {
+    forecastImage.style.backgroundImage = "url(images/snow.png)";
+  } else if (weatherID >= 700 && weatherID < 800) {
+    forecastImage.style.backgroundImage = "url(image/haze.png)";
+  } else if (weatherID === 800) {
+    forecastImage.style.backgroundImage = "url(images/clear.png)";
+  } else if (weatherID >= 800) {
+    forecastImage.style.backgroundImage = "url(images/cloudy.png)";
+  }
 
   let longitude = response.data.coord.lon;
   let latitude = response.data.coord.lat;

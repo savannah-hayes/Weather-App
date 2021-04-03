@@ -45,19 +45,25 @@
             <button class="recent-cities" id="lisbon-button">lisbon</button>
           </div>
           <!--Search Engine-->
-          <form id="search-form">
+          <form class="search-form" id="search-form">
             <div class="row">
               <div class="col-9">
                 <input
                   type="search"
                   placeholder="Enter a city..."
+                  class="city-input"
                   id="city-input"
                   autocomplete="off"
                 />
               </div>
               <!--Search button-->
               <div class="col-3">
-                <input type="submit" value="search" id="search-button" />
+                <input
+                  type="submit"
+                  value="search"
+                  class="search-button"
+                  id="search-button"
+                />
               </div>
             </div>
           </form>
@@ -74,15 +80,22 @@
             <!--Temperature units-->
             <div class="col-4 weather-temperature">
               <ul>
-                <li id="temperature-unit">
-                  <strong id="temperature"></strong>
+                <li class="temperature-unit" id="temperature-unit">
+                  <strong class="temperature" id="temperature"></strong>
                   <span class="units">
-                    <a href="#" id="celsius-link" class="active">°C |</a>
-                    <a href="#" id="fahrenheit-link">°F</a></span
+                    <a href="#" id="celsius-link" class="active celsius-link"
+                      >°C |</a
+                    >
+                    <a href="#" class="fahrenheit-link" id="fahrenheit-link"
+                      >°F</a
+                    ></span
                   >
                 </li>
                 <!--Current weather description-->
-                <li id="temperature-description"></li>
+                <li
+                  class="temperature-description"
+                  id="temperature-description"
+                ></li>
                 <img width="55" src="" alt="" id="icon" />
               </ul>
             </div>
@@ -110,7 +123,7 @@
         </div>
       </div>
       <!--Footer-->
-      <div id="github-link">
+      <div class="github-link" id="github-link">
         <small>
           <a
             href="https://github.com/savannah-hayes/Weather-App"

@@ -16,8 +16,9 @@
 body {
   background-image: url("https://i.pinimg.com/564x/ee/c4/16/eec4169c5e89189f59d86f21829e0454.jpg");
   background-repeat: no-repeat;
-  background-size: 100% 115%;
+  background-size: 100% 150%;
   background-attachment: fixed;
+
   font-family: "Barlow", sans-serif;
 }
 
@@ -73,32 +74,41 @@ ul {
 }
 
 .temperature {
-  font-size: 30px;
+  font-size: 40px;
   margin-right: -1px;
 }
 
 .temperature-unit {
-  margin-top: 15px;
+  position: relative;
+  margin-top: 42px;
+  color: white;
 }
 
 .celsius-link,
 .fahrenheit-link {
   position: relative;
-  top: -10px;
-  font-size: 14px;
+  top: -16px;
+  font-size: 15px;
   text-decoration: none;
+  color: white;
+}
+
+.celsius-link:hover,
+.fahrenheit-link:hover {
+  color: white;
 }
 
 .weather-temperature .active {
   cursor: default;
-  color: black;
+  color: rgb(24, 24, 24);
 }
 
 .temperature-description {
-  font-size: 15px;
-  display: flex;
+  font-size: 16px;
+  font-weight: 900;
+  position: relative;
   justify-content: center;
-  margin-top: 10px;
+  margin-top: -5px;
 }
 
 .weather-conditions {
@@ -109,12 +119,11 @@ ul {
 .weather-temperature {
   margin-top: -10px;
   border: transparent;
-  opacity: 0.9;
   text-align: center;
-  color: black;
+  color: white;
   border-radius: 50%;
-  width: 165px;
-  height: 165px;
+  width: 170px;
+  height: 170px;
 }
 
 .hour-forecast {
@@ -141,7 +150,7 @@ ul {
 
 .forecast-icon {
   margin: 10px;
-  opacity: 0.7;
+  opacity: 0.6;
 }
 
 .weather-forecast-temperatures {

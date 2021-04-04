@@ -170,7 +170,6 @@ function displayWeatherCondition(response) {
   let humidityElement = document.querySelector("#humidity");
   let pressureElement = document.querySelector("#pressure");
   let dateElement = document.querySelector("#date");
-  let iconElement = document.querySelector("#icon");
 
   celsiusTemperature = response.data.main.temp;
 
@@ -182,11 +181,6 @@ function displayWeatherCondition(response) {
   humidityElement.innerHTML = response.data.main.humidity;
   pressureElement.innerHTML = response.data.main.pressure;
   dateElement.innerHTML = formatDate(new Date(), response.data.timezone);
-  iconElement.setAttribute(
-    "src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
-  );
-  iconElement.setAttribute("alt", response.data.weather[0].description);
 
   let forecastImage = document.querySelector(".weather-temperature");
   let weatherID = response.data.weather[0].id;
@@ -199,11 +193,17 @@ function displayWeatherCondition(response) {
   } else if (weatherID >= 600 && weatherID < 700) {
     forecastImage.style.backgroundImage = "url(images/snow.png)";
   } else if (weatherID >= 700 && weatherID < 800) {
-    forecastImage.style.backgroundImage = "url(image/haze.png)";
+    forecastImage.style.backgroundImage = "url(image/fog.png)";
   } else if (weatherID === 800) {
-    forecastImage.style.backgroundImage = "url(images/clear.png)";
-  } else if (weatherID >= 800) {
-    forecastImage.style.backgroundImage = "url(images/cloudy.png)";
+    forecastImage.style.backgroundImage = "url(images/sunny.png)";
+  } else if (weatherID === 801) {
+    forecastImage.style.backgroundImage = "url(images/fewclouds.png)";
+  } else if (weatherID === 802) {
+    forecastImage.style.backgroundImage = "url(images/clouds.png)";
+  } else if (weatherID === 803) {
+    forecastImage.style.backgroundImage = "url(images/clouds.png)";
+  } else if (weatherID === 804) {
+    forecastImage.style.backgroundImage = "url(images/overcast.png)";
   }
 
   let longitude = response.data.coord.lon;

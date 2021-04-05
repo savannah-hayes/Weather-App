@@ -14,17 +14,19 @@
 }
 
 body {
-  background-image: url("https://i.pinimg.com/564x/ee/c4/16/eec4169c5e89189f59d86f21829e0454.jpg");
-  background-repeat: no-repeat;
-  background-size: 100% 150%;
-  background-attachment: fixed;
-
+  background: linear-gradient(#2980b9, #6dd5fa, #ffffff);
+  background-size: 100% 140%;
   font-family: "Barlow", sans-serif;
 }
 
 h1 {
   font-size: 24px;
   line-height: 28px;
+}
+
+h2 {
+  font-size: 19px;
+  line-height: 21px;
 }
 
 ul {
@@ -36,7 +38,7 @@ ul {
   border: none;
   background-color: transparent;
   padding: 15px 10px 1px 5px;
-  margin-right: 10px;
+  margin-right: 5px;
   margin-left: 5px;
 }
 
@@ -56,14 +58,15 @@ ul {
   margin-left: -60px;
   border-color: transparent;
   color: white;
-  background-color: #1168da;
+  border-radius: 4px;
+  background-color: rgb(79, 79, 79);
 }
 
 .weather-app-wrapper {
-  max-width: 600px;
+  max-width: 576px;
   margin: 30px auto;
   background-color: white;
-  opacity: 0.6;
+  opacity: 0.9;
   border-radius: 25px;
 }
 
@@ -74,21 +77,27 @@ ul {
 }
 
 .temperature {
-  font-size: 40px;
+  font-size: 50px;
   margin-right: -1px;
+}
+
+.city {
+  position: relative;
+  margin-top: 25px;
 }
 
 .temperature-unit {
   position: relative;
-  margin-top: 42px;
+  margin-top: 35px;
   color: white;
 }
 
 .celsius-link,
 .fahrenheit-link {
   position: relative;
-  top: -16px;
+  top: -22px;
   font-size: 15px;
+  font-weight: 900;
   text-decoration: none;
   color: white;
 }
@@ -105,15 +114,22 @@ ul {
 
 .temperature-description {
   font-size: 16px;
-  font-weight: 900;
   position: relative;
   justify-content: center;
-  margin-top: -5px;
+  margin-top: -6px;
+}
+
+.temperature-description::first-letter {
+  text-transform: capitalize;
 }
 
 .weather-conditions {
   text-align: right;
-  margin-top: 25px;
+  margin-top: 28px;
+}
+
+.weather-description {
+  font-size: 16px;
 }
 
 .weather-temperature {
@@ -132,8 +148,8 @@ ul {
 }
 
 .github-link {
-  margin-left: 180px;
-  margin-top: -30px;
+  float: left;
+  margin-left: 12px;
 }
 
 .weather-forecast {
@@ -150,6 +166,7 @@ ul {
 
 .forecast-icon {
   margin: 10px;
+  font-size: 20px;
   opacity: 0.6;
 }
 

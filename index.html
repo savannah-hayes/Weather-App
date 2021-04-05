@@ -42,7 +42,7 @@
             </button>
             <button class="recent-cities" id="paris-button">Paris</button>
             <button class="recent-cities" id="sao-button">São Paulo</button>
-            <button class="recent-cities" id="lisbon-button">lisbon</button>
+            <button class="recent-cities" id="lisbon-button">Lisbon</button>
           </div>
           <!--Search Engine-->
           <form class="search-form" id="search-form">
@@ -60,7 +60,7 @@
               <div class="col-3">
                 <input
                   type="submit"
-                  value="search"
+                  value="Search"
                   class="search-button"
                   id="search-button"
                 />
@@ -68,9 +68,9 @@
             </div>
           </form>
           <div class="row">
-            <div class="col-4">
+            <div class="col-4 city-date">
               <!--Name of city and country-->
-              <h1 id="city"></h1>
+              <h1 class="city" id="city"></h1>
               <!--Current date and time-->
               <ul>
                 <li class="date-format">Local time:</li>
@@ -100,12 +100,10 @@
             </div>
             <!--Weather descriptions-->
             <div class="col-4 weather-conditions">
+              <h2>Feels like: <span id="feels-like"></span><small>°</small></h2>
               <ul>
                 <li class="weather-description">
-                  Feels like: <span id="feels-like"></span>°
-                </li>
-                <li class="weather-description">
-                  Wind: <span id="wind"></span> km/h
+                  Wind: <span id="wind"></span> m/s
                 </li>
                 <li class="weather-description">
                   Humidity: <span id="humidity"></span> %
@@ -120,16 +118,22 @@
           <div class="hour-forecast">Daily Forecast</div>
           <div class="row weather-forecast" id="forecast"></div>
         </div>
-      </div>
-      <!--Footer-->
-      <div class="github-link" id="github-link">
-        <small>
-          <a
-            href="https://github.com/savannah-hayes/Weather-App"
-            target="_blank"
-            >Open-source</a
-          >, by Savannah Hayes</small
-        >
+        <!--Footer-->
+        <div class="github-link" id="github-link">
+          <small>
+            Open-source
+            <a
+              href="https://github.com/savannah-hayes/Weather-App"
+              target="_blank"
+              ><i class="fab fa-github"></i></a
+            >, by Savannah Hayes
+            <a
+              href="http://linkedin.com/in/savannah-hayes-128b0418a"
+              target="_blank"
+              ><i class="fab fa-linkedin-in"></i>
+            </a>
+          </small>
+        </div>
       </div>
     </div>
     <script src="src/index.js"></script>

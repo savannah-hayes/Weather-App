@@ -47,8 +47,9 @@ function formatDate(date, timezone) {
   }
 
   let currentTime = `${hours}:${minutes}`;
-  let dateElement = document.querySelector("#date");
-  dateElement.innerHTML = `${day} ${currentTime} ${month} ${dateIndex}, ${year}`;
+  document.querySelector(
+    "#date"
+  ).innerHTML = `${day} ${currentTime} ${month} ${dateIndex}, ${year}`;
 
   let formattedDate = `${day} ${currentTime} <br/>
   ${month} ${dateIndex}, ${year}`;
@@ -161,26 +162,25 @@ function getForecast(latitude, longitude) {
 
 // Display temperature, time, date and descriptions
 function displayWeatherCondition(response) {
-  let temperatureElemement = document.querySelector("#temperature");
-  let cityElement = document.querySelector("#city");
-  let countryElement = response.data.sys.country;
-  let feelsLikeElement = document.querySelector("#feels-like");
-  let descriptionElement = document.querySelector("#temperature-description");
-  let windElement = document.querySelector("#wind");
-  let humidityElement = document.querySelector("#humidity");
-  let pressureElement = document.querySelector("#pressure");
-  let dateElement = document.querySelector("#date");
+  document.querySelector("#temperature").innerHTML = Math.round(
+    response.data.main.temp
+  );
+  document.querySelector("#city").innerHTML = response.data.name;
+  celsiusFeels = response.data.main.feels_like;
+  document.querySelector("#feels-like").innerHTML = Math.round(celsiusFeels);
+  document.querySelector("#temperature-description").innerHTML =
+    response.data.weather[0].description;
+  document.querySelector("#wind").innerHTML = Math.round(
+    response.data.wind.speed
+  );
+  document.querySelector("#humidity").innerHTML = response.data.main.humidity;
+  document.querySelector("#pressure").innerHTML = response.data.main.pressure;
+  document.querySelector("#date").innerHTML = formatDate(
+    new Date(),
+    response.data.timezone
+  );
 
   celsiusTemperature = response.data.main.temp;
-
-  temperatureElemement.innerHTML = Math.round(response.data.main.temp);
-  cityElement.innerHTML = `${response.data.name}, <br/> ${countryElement}`;
-  feelsLikeElement.innerHTML = Math.round(response.data.main.feels_like);
-  descriptionElement.innerHTML = response.data.weather[0].description;
-  windElement.innerHTML = Math.round(response.data.wind.speed);
-  humidityElement.innerHTML = response.data.main.humidity;
-  pressureElement.innerHTML = response.data.main.pressure;
-  dateElement.innerHTML = formatDate(new Date(), response.data.timezone);
 
   let forecastImage = document.querySelector(".weather-temperature");
   let weatherID = response.data.weather[0].id;
@@ -193,13 +193,13 @@ function displayWeatherCondition(response) {
   } else if (weatherID >= 600 && weatherID < 700) {
     forecastImage.style.backgroundImage = "url(images/snow.png)";
   } else if (weatherID >= 700 && weatherID < 800) {
-    forecastImage.style.backgroundImage = "url(image/fog.png)";
+    forecastImage.style.backgroundImage = "url(images/fog.png)";
   } else if (weatherID === 800) {
     forecastImage.style.backgroundImage = "url(images/sunny.png)";
   } else if (weatherID === 801) {
     forecastImage.style.backgroundImage = "url(images/fewclouds.png)";
   } else if (weatherID === 802) {
-    forecastImage.style.backgroundImage = "url(images/clouds.png)";
+    forecastImage.style.backgroundImage = "url(images/scattered.png)";
   } else if (weatherID === 803) {
     forecastImage.style.backgroundImage = "url(images/clouds.png)";
   } else if (weatherID === 804) {
@@ -216,52 +216,50 @@ function sanFrancisco(event) {
   event.preventDefault();
   search("San Francisco");
 }
-let sfButton = document.querySelector("#sf-button");
-sfButton.addEventListener("click", sanFrancisco);
+document.querySelector("#sf-button").addEventListener("click", sanFrancisco);
 
 function tokyo(event) {
   event.preventDefault();
   search("Tokyo");
 }
-let tokyoButton = document.querySelector("#tokyo-button");
-tokyoButton.addEventListener("click", tokyo);
+document.querySelector("#tokyo-button").addEventListener("click", tokyo);
 
 function melbourne(event) {
   event.preventDefault();
   search("Melbourne, Au");
 }
-let melbourneButton = document.querySelector("#melbourne-button");
-melbourneButton.addEventListener("click", melbourne);
+document
+  .querySelector("#melbourne-button")
+  .addEventListener("click", melbourne);
 
 function paris(event) {
   event.preventDefault();
   search("Paris");
 }
-let parisButton = document.querySelector("#paris-button");
-parisButton.addEventListener("click", paris);
+document.querySelector("#paris-button").addEventListener("click", paris);
 
 function sãoPaulo(event) {
   event.preventDefault();
   search("São Paulo");
 }
-let saoButton = document.querySelector("#sao-button");
-saoButton.addEventListener("click", sãoPaulo);
+document.querySelector("#sao-button").addEventListener("click", sãoPaulo);
 
 function lisbon(event) {
   event.preventDefault();
   search("Lisbon");
 }
-let lisbonButton = document.querySelector("#lisbon-button");
-lisbonButton.addEventListener("click", lisbon);
+document.querySelector("#lisbon-button").addEventListener("click", lisbon);
 
 // Convert fahrenheit to celsius
 function displayCelsiusTemperature(event) {
   event.preventDefault();
-  let temperatureElemement = document.querySelector("#temperature");
+  document.querySelector("#temperature").innerHTML = Math.round(
+    celsiusTemperature
+  );
+  document.querySelector("#feels-like").innerHTML = Math.round(celsiusFeels);
 
   celsiusLink.classList.add("active");
   fahrenheitLink.classList.remove("active");
-  temperatureElemement.innerHTML = Math.round(celsiusTemperature);
 
   convertForecastTemp("celsius");
 
@@ -278,6 +276,9 @@ function displayFahrenheitTemperature(event) {
   fahrenheitLink.classList.add("active");
   let fahrenheitTemperature = Math.round(celsiusTemperature * (9 / 5) + 32);
   temperatureElemement.innerHTML = Math.round(fahrenheitTemperature);
+
+  fahrenheitFeels = (celsiusFeels * 9) / 5 + 32;
+  document.querySelector("#feels-like").innerHTML = Math.round(fahrenheitFeels);
 
   convertForecastTemp("fahrenheit");
 
@@ -317,6 +318,7 @@ function convertForecastTemp(unit) {
 
 // Event Listeners
 let celsiusTemperature = null;
+let celsiusFeels = null;
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);

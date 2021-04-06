@@ -212,11 +212,11 @@ function displayWeatherCondition(response) {
 }
 
 // recent city search buttons
-function sanFrancisco(event) {
+function lisbon(event) {
   event.preventDefault();
-  search("San Francisco");
+  search("Lisbon");
 }
-document.querySelector("#sf-button").addEventListener("click", sanFrancisco);
+document.querySelector("#lisbon-button").addEventListener("click", lisbon);
 
 function tokyo(event) {
   event.preventDefault();
@@ -224,31 +224,29 @@ function tokyo(event) {
 }
 document.querySelector("#tokyo-button").addEventListener("click", tokyo);
 
-function melbourne(event) {
+function sf(event) {
   event.preventDefault();
-  search("Melbourne, Au");
+  search("San Francisco");
 }
-document
-  .querySelector("#melbourne-button")
-  .addEventListener("click", melbourne);
+document.querySelector("#sf-button").addEventListener("click", sf);
+
+function cairo(event) {
+  event.preventDefault();
+  search("Cairo");
+}
+document.querySelector("#cairo-button").addEventListener("click", cairo);
+
+function sydney(event) {
+  event.preventDefault();
+  search("Sydney");
+}
+document.querySelector("#sydney-button").addEventListener("click", sydney);
 
 function paris(event) {
   event.preventDefault();
   search("Paris");
 }
 document.querySelector("#paris-button").addEventListener("click", paris);
-
-function sãoPaulo(event) {
-  event.preventDefault();
-  search("São Paulo");
-}
-document.querySelector("#sao-button").addEventListener("click", sãoPaulo);
-
-function lisbon(event) {
-  event.preventDefault();
-  search("Lisbon");
-}
-document.querySelector("#lisbon-button").addEventListener("click", lisbon);
 
 // Convert fahrenheit to celsius
 function displayCelsiusTemperature(event) {

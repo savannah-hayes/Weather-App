@@ -1,3 +1,8 @@
+h1,
+h2 {
+  font-weight: 600;
+}
+
 .date-format,
 .weather-description {
   list-style: none;
@@ -14,8 +19,22 @@
 }
 
 body {
-  background: linear-gradient(#2980b9, #6dd5fa, #ffffff);
-  background-size: 100% 140%;
+  background-image: linear-gradient(
+    to bottom,
+    #1788db,
+    #1c96e1,
+    #2aa3e7,
+    #3cb0ec,
+    #4fbdf0,
+    #5fc5f2,
+    #6fcdf4,
+    #97defb,
+    #b7eafc,
+    #d7f3fe,
+    #f0fbff,
+    #fff
+  );
+  background-size: 100% 135%;
   font-family: "Barlow", sans-serif;
 }
 
@@ -34,12 +53,16 @@ ul {
   padding: 0;
 }
 
+.city-buttons {
+  width: fit-content;
+  display: flex;
+}
+
 .recent-cities {
   border: none;
   background-color: transparent;
-  padding: 15px 10px 1px 5px;
-  margin-right: 5px;
-  margin-left: 5px;
+  padding: 12px 0px 5px 15px;
+  margin-left: 15px;
 }
 
 .search-form {
@@ -62,28 +85,29 @@ ul {
   background-color: rgb(79, 79, 79);
 }
 
-.weather-app-wrapper {
-  max-width: 576px;
-  margin: 30px auto;
-  background-color: white;
-  opacity: 0.9;
-  border-radius: 25px;
-}
-
-.weather-app {
-  padding: 20px;
-  border-radius: 4px;
-  border: transparent;
-}
-
 .temperature {
   font-size: 50px;
   margin-right: -1px;
 }
 
+.city-date {
+  max-width: 33.33%;
+}
+
 .city {
   position: relative;
   margin-top: 25px;
+}
+
+.weather-temperature {
+  margin-top: -10px;
+  border: transparent;
+  text-align: center;
+  color: white;
+  border-radius: 50%;
+  width: 170px;
+  height: 170px;
+  max-width: 33.33%;
 }
 
 .temperature-unit {
@@ -124,32 +148,18 @@ ul {
 }
 
 .weather-conditions {
-  text-align: right;
   margin-top: 28px;
+  text-align: right;
+  max-width: 33.33%;
 }
 
 .weather-description {
   font-size: 16px;
 }
 
-.weather-temperature {
-  margin-top: -10px;
-  border: transparent;
-  text-align: center;
-  color: white;
-  border-radius: 50%;
-  width: 170px;
-  height: 170px;
-}
-
 .hour-forecast {
   font-weight: 900;
   margin-bottom: -25px;
-}
-
-.github-link {
-  float: left;
-  margin-left: 12px;
 }
 
 .weather-forecast {
@@ -176,4 +186,24 @@ ul {
 
 .weather-forecast-temperature-min {
   opacity: 0.6;
+}
+
+.github-link {
+  float: left;
+  margin-left: 12px;
+}
+
+.weather-app {
+  padding: 20px;
+  border-radius: 4px;
+  border: transparent;
+}
+
+.weather-app-wrapper {
+  max-width: 576px;
+  margin: 30px auto;
+  background-color: white;
+  opacity: 0.7;
+  border-radius: 25px;
+  box-shadow: 3px 5px 5px 3px grey;
 }

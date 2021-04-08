@@ -78,7 +78,7 @@ h2 {
 
 .recent-cities {
   border: none;
-  margin-right: 7px;
+  margin-right: 2px;
   background-color: transparent;
 }
 
@@ -114,8 +114,8 @@ h2 {
   margin-top: -10px;
   border: transparent;
   border-radius: 50%;
-  width: 170px;
-  height: 170px;
+  width: 180px;
+  height: 180px;
 }
 
 .temperature-unit {
@@ -160,7 +160,9 @@ h2 {
 
 .hour-forecast {
   font-weight: 900;
-  margin-bottom: -25px;
+  font-size: large;
+  margin-top: 25px;
+  margin-bottom: -10px;
 }
 
 .weather-forecast {
@@ -180,7 +182,7 @@ h2 {
 }
 
 .weather-forecast-temperatures {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .github-link {
@@ -199,9 +201,166 @@ h2 {
 }
 
 .weather-app-wrapper {
-  max-width: 500px;
+  max-width: 550px;
   margin: 30px auto;
   background-color: white;
   border-radius: 25px;
   box-shadow: 3px 5px 5px 3px grey;
+}
+
+/* #### iPhone 4+ Portrait or Landscape #### */
+@media screen and (min-width: 320px) and (max-width: 390px) {
+  .city-date,
+  .weather-temperature {
+    max-width: 50%;
+  }
+  .city-buttons {
+    font-size: x-small;
+    white-space: nowrap;
+  }
+  #london-button {
+    display: none;
+  }
+  .search-form {
+    margin: 10px 0 10px 0;
+  }
+  .city-input {
+    width: 75%;
+    height: 23px;
+    margin-top: 2px;
+  }
+  .search-button {
+    width: 100%;
+    font-size: x-small;
+    margin-left: -40px;
+    padding: 0px 9px 0px 1px;
+  }
+  .city {
+    position: relative;
+    margin-top: 5px;
+  }
+  .city-date {
+    margin-top: -10px;
+  }
+  .weather-conditions {
+    position: relative;
+    text-align: left;
+    font-size: 0.01px;
+  }
+  .weather-temperature {
+    position: relative;
+    margin-top: 30px;
+    height: 150px;
+  }
+  .temperature-description {
+    white-space: normal;
+    margin-top: -12px;
+  }
+  body {
+    background-size: cover;
+  }
+  .weather-app-wrapper {
+    padding: 0;
+    margin-top: 8px;
+  }
+}
+
+@media screen and (min-width: 390px) and (max-width: 480px) {
+  .city-date,
+  .weather-temperature {
+    max-width: 50%;
+  }
+  .city-buttons {
+    white-space: nowrap;
+    font-size: small;
+  }
+  #london-button {
+    display: none;
+  }
+  .search-button {
+    margin: -45px;
+    margin-top: 0px;
+  }
+  .weather-conditions {
+    max-width: 100%;
+    text-align: left;
+    margin-top: -10px;
+  }
+  .city-date {
+    text-align: left;
+  }
+  .weather-temperature {
+    position: relative;
+    margin-top: 30px;
+    height: 190px;
+    width: 190px;
+  }
+  .city {
+    position: relative;
+    margin-top: 5px;
+    white-space: no-wrap;
+  }
+  .weather-conditions {
+    margin-top: -90px;
+  }
+  .temperature-description {
+    margin-top: -10px;
+  }
+  body {
+    background-size: auto;
+  }
+  .weather-app-wrapper {
+    padding: 0;
+    margin-top: 10px;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 575px) {
+  .city-buttons {
+    white-space: nowrap;
+    font-size: medium;
+  }
+  .city-input {
+    width: 70%;
+  }
+  .search-button {
+    width: 90%;
+  }
+  .city {
+    position: relative;
+    margin-top: 25px;
+    white-space: normal;
+  }
+  .weather-conditions {
+    white-space: nowrap;
+    margin-top: 35px;
+  }
+  .weather-temperature {
+    margin-top: 10px;
+  }
+  .weather-temperature {
+    position: relative;
+    margin-top: 5px;
+    height: 150px;
+  }
+  body {
+    background-size: auto;
+  }
+}
+
+@media screen and (min-width: 570px) and (max-width: 768px) {
+  .city-buttons {
+    font-size: 90%;
+  }
+  .city {
+    position: relative;
+    margin-top: 30px;
+    white-space: no-wrap;
+  }
+  .weather-conditions {
+    margin-top: 35px;
+  }
+  body {
+    background-size: cover;
+  }
 }

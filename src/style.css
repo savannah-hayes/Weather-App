@@ -325,6 +325,12 @@ h2 {
   .weather-description {
     font-size: 13px;
   }
+  .forecast-icon {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    padding: 8px 0 8px 0;
+  }
   .weather-app-wrapper {
     padding: 0;
     margin-top: 10px;
@@ -386,6 +392,15 @@ h2 {
   .hour-forecast {
     text-align: center;
   }
+  .weather-forecast-temperatures {
+    white-space: nowrap;
+  }
+  .forecast-icon {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    padding: 7px 0 7px 0;
+  }
   .weather-app-wrapper {
     padding: 0;
     margin-top: 10px;
@@ -428,6 +443,9 @@ h2 {
   .weather-description {
     font-size: 13px;
   }
+  .weather-forecast-temperatures {
+    white-space: normal;
+  }
   .weather-app-wrapper {
     max-width: 340px;
   }
@@ -441,7 +459,8 @@ h2 {
     white-space: nowrap;
   }
   .recent-cities {
-    font-size: 6.5px;
+    font-size: 8px;
+    margin-right: -5px;
   }
   .city-input {
     width: 60%;
@@ -467,16 +486,80 @@ h2 {
     height: 150px;
     width: 150px;
   }
+  .weather-forecast-temperatures {
+    white-space: normal;
+  }
+  .forecast-icon {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    padding: 8px 0 8px 0;
+  }
   .weather-app-wrapper {
     max-width: 310px;
   }
 }
 
 @media screen and (max-width: 280px) {
+  h1 {
+    font-size: 17px;
+  }
   .city-buttons {
     white-space: nowrap;
   }
+  .recent-cities {
+    font-size: 6px;
+    margin-right: -5px;
+  }
+  .city-input {
+    width: 70%;
+    height: 80%;
+    position: relative;
+    margin-left: 20px;
+    margin-top: 2px;
+  }
+  .search-button {
+    position: relative;
+    margin-left: -45px;
+    font-size: x-small;
+    padding: 0 8px 0 0px;
+  }
+  .date-format {
+    font-size: 12px;
+  }
+  .weather-forecast-temperatures {
+    white-space: normal;
+  }
+  .temperature {
+    font-size: 30px;
+    margin-left: 10px;
+  }
+  .weather-temperature {
+    position: relative;
+    margin-left: 115px;
+    margin-top: -50px;
+    height: 120px;
+    width: 120px;
+  }
+  .celsius-link,
+  .fahrenheit-link {
+    position: relative;
+    top: -13px;
+    font-size: 8px;
+    font-weight: 900;
+    text-decoration: none;
+  }
+  .temperature-description {
+    font-size: 12px;
+    margin-top: 8px;
+  }
+  .weather-conditions {
+    margin-top: -40px;
+  }
   .weather-app-wrapper {
-    max-width: 278px;
+    max-width: 280px;
+  }
+  body {
+    height: 780px;
   }
 }

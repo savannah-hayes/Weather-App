@@ -57,8 +57,9 @@ ul,
 
 body {
   background-image: url("https://i.pinimg.com/564x/ee/c4/16/eec4169c5e89189f59d86f21829e0454.jpg");
-  background-repeat: no-repeat;
   background-size: cover;
+  background-repeat: no-repeat;
+  height: 1024px;
   font-family: "Barlow", sans-serif;
 }
 
@@ -70,10 +71,6 @@ h1 {
 h2 {
   font-size: 19px;
   line-height: 21px;
-}
-
-.city-buttons {
-  width: 100%;
 }
 
 .recent-cities {
@@ -208,135 +205,38 @@ h2 {
   box-shadow: 3px 5px 5px 3px grey;
 }
 
-/* #### iPhone 4+ Portrait or Landscape #### */
-@media screen and (min-width: 320px) and (max-width: 390px) {
-  .city-date,
-  .weather-temperature,
-  .temperature-description {
-    max-width: 100%;
-  }
+@media screen and (max-width: 768px) {
   .city-buttons {
     white-space: nowrap;
-    font-size: 55%;
   }
-  .city-input {
-    width: 70%;
+  .recent-cities {
+    font-size: 15px;
+  }
+  .city {
     position: relative;
-    margin-left: 40px;
-  }
-  .search-button {
-    position: relative;
-    margin-left: -40px;
-    font-size: x-small;
-    margin-top: 0px;
-  }
-  .search-form {
-    margin-top: 14px;
-    margin-bottom: 40px;
+    margin-top: 30px;
+    white-space: no-wrap;
   }
   .weather-conditions {
-    text-align: left;
-    margin-top: -70px;
+    margin-top: 30px;
+  }
+  .weather-forecast-temperatures {
     white-space: nowrap;
-  }
-  .city-date {
-    text-align: left;
-    position: relative;
-    margin-top: -50px;
-    white-space: normal;
-  }
-  .weather-temperature {
-    position: relative;
-    margin-left: 145px;
-    margin-top: -45px;
-    height: 170px;
-    width: 170px;
-  }
-  .temperature-description {
-    margin-top: -8px;
-  }
-  .hour-forecast {
-    text-align: center;
-  }
-  body {
-    background-size: cover;
-  }
-  .weather-app-wrapper {
-    padding: 0;
-    margin-top: 10px;
-    max-width: 380px;
   }
 }
 
-@media screen and (min-width: 390px) and (max-width: 480px) {
-  .city-date,
-  .weather-temperature,
-  .temperature-description {
-    max-width: 100%;
-  }
+@media screen and (max-width: 575px) {
   .city-buttons {
     white-space: nowrap;
-    font-size: 65%;
+  }
+  .recent-cities {
+    font-size: 13px;
   }
   .city-input {
-    width: 70%;
-    position: relative;
-    margin-left: 50px;
+    width: 65%;
   }
   .search-button {
-    position: relative;
-    margin-left: -40px;
-    font-size: x-small;
-    margin-top: 0px;
-  }
-  .search-form {
-    margin-top: 14px;
-    margin-bottom: 40px;
-  }
-  .weather-conditions {
-    text-align: left;
-    margin-top: -70px;
-    white-space: nowrap;
-  }
-  .city-date {
-    text-align: left;
-    position: relative;
-    margin-top: -50px;
-    white-space: normal;
-  }
-  .weather-temperature {
-    position: relative;
-    margin-left: 160px;
-    margin-top: -45px;
-    height: 170px;
-    width: 170px;
-  }
-  .temperature-description {
-    margin-top: -8px;
-  }
-  .hour-forecast {
-    text-align: center;
-  }
-  body {
-    background-size: cover;
-  }
-  .weather-app-wrapper {
-    padding: 0;
-    margin-top: 10px;
-    max-width: 380px;
-  }
-}
-
-@media screen and (min-width: 480px) and (max-width: 575px) {
-  .city-buttons {
-    white-space: nowrap;
-    font-size: 83%;
-  }
-  .city-input {
-    width: 70%;
-  }
-  .search-button {
-    width: 90%;
+    width: 100%;
   }
   .city {
     position: relative;
@@ -362,30 +262,221 @@ h2 {
   .weather-forecast-temperatures {
     white-space: nowrap;
   }
-  body {
-    background-size: cover;
-  }
   .weather-app-wrapper {
-    max-width: 450px;
+    max-width: 480px;
   }
 }
 
-@media screen and (min-width: 575px) and (max-width: 768px) {
+@media screen and (max-width: 480px) {
+  .city-date,
+  .weather-temperature,
+  .temperature-description {
+    max-width: 100%;
+  }
   .city-buttons {
-    font-size: 93%;
-  }
-  .city {
-    position: relative;
-    margin-top: 30px;
-    white-space: no-wrap;
-  }
-  .weather-conditions {
-    margin-top: 35px;
-  }
-  .weather-forecast-temperatures {
     white-space: nowrap;
   }
+  .recent-cities {
+    font-size: 10px;
+  }
+  .city-input {
+    width: 70%;
+    position: relative;
+    margin-left: 50px;
+  }
+  .search-button {
+    position: relative;
+    margin-left: -40px;
+    font-size: x-small;
+    margin-top: 0px;
+  }
+  .search-form {
+    margin-top: 14px;
+    margin-bottom: 55px;
+  }
+  .weather-conditions {
+    text-align: left;
+    margin-top: -85px;
+    white-space: nowrap;
+  }
+  .city-date {
+    text-align: left;
+    position: relative;
+    margin-top: -65px;
+    white-space: normal;
+  }
+  .weather-temperature {
+    position: relative;
+    margin-left: 160px;
+    margin-top: -45px;
+    height: 170px;
+    width: 170px;
+  }
+  .temperature-description {
+    margin-top: 0px;
+  }
+  .hour-forecast {
+    text-align: center;
+  }
+  h2 {
+    font-size: 14px;
+    margin-bottom: 0px;
+  }
+  .weather-description {
+    font-size: 13px;
+  }
+  .weather-app-wrapper {
+    padding: 0;
+    margin-top: 10px;
+    max-width: 400px;
+  }
   body {
-    background-size: cover;
+    height: 960px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .city-date,
+  .weather-temperature,
+  .temperature-description {
+    max-width: 100%;
+  }
+  .city-buttons {
+    white-space: nowrap;
+  }
+  .recent-cities {
+    font-size: 8px;
+  }
+  .city-input {
+    width: 70%;
+    position: relative;
+    margin-left: 40px;
+  }
+  .search-button {
+    position: relative;
+    margin-left: -40px;
+    font-size: 14px;
+    margin-top: 2px;
+  }
+  .search-form {
+    margin-top: 14px;
+    margin-bottom: 40px;
+  }
+  .weather-conditions {
+    text-align: left;
+    margin-top: -80px;
+    white-space: nowrap;
+  }
+  .city-date {
+    text-align: left;
+    position: relative;
+    margin-top: -50px;
+    white-space: normal;
+  }
+  .weather-temperature {
+    position: relative;
+    margin-left: 145px;
+    margin-top: -45px;
+    height: 170px;
+    width: 170px;
+  }
+  .temperature-description {
+    margin-top: -8px;
+  }
+  .hour-forecast {
+    text-align: center;
+  }
+  .weather-app-wrapper {
+    padding: 0;
+    margin-top: 10px;
+    max-width: 380px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .city-date,
+  .weather-temperature,
+  .temperature-description {
+    max-width: 100%;
+  }
+  .city-buttons {
+    white-space: nowrap;
+  }
+  .city-date {
+    text-align: left;
+    position: relative;
+    margin-top: -50px;
+    margin-bottom: 10px;
+    white-space: normal;
+  }
+  .weather-conditions {
+    text-align: left;
+    margin-top: -70px;
+    white-space: nowrap;
+  }
+  .weather-temperature {
+    position: relative;
+    margin-left: 145px;
+    margin-top: -70px;
+    height: 170px;
+    width: 170px;
+  }
+  h2 {
+    font-size: 14px;
+    margin-bottom: 0px;
+  }
+  .weather-description {
+    font-size: 13px;
+  }
+  .weather-app-wrapper {
+    max-width: 340px;
+  }
+  body {
+    height: 750px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .city-buttons {
+    white-space: nowrap;
+  }
+  .recent-cities {
+    font-size: 6.5px;
+  }
+  .city-input {
+    width: 60%;
+    height: 90%;
+    position: relative;
+    margin-left: 40px;
+    margin-top: 2px;
+  }
+  .search-button {
+    position: relative;
+    margin-left: -50px;
+    font-size: x-small;
+  }
+  .weather-conditions {
+    text-align: left;
+    margin-top: -75px;
+    white-space: nowrap;
+  }
+  .weather-temperature {
+    position: relative;
+    margin-left: 125px;
+    margin-top: -50px;
+    height: 150px;
+    width: 150px;
+  }
+  .weather-app-wrapper {
+    max-width: 310px;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  .city-buttons {
+    white-space: nowrap;
+  }
+  .weather-app-wrapper {
+    max-width: 278px;
   }
 }

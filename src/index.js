@@ -187,7 +187,7 @@ function displayWeatherCondition(response) {
   if (weatherID >= 200 && weatherID < 300) {
     forecastImage.style.backgroundImage = "url(images/thunder.png)";
   } else if (weatherID >= 300 && weatherID < 500) {
-    forecastImage.style.backgroundImage = "url(images/drizzle.png)";
+    forecastImage.style.backgroundImage = "url(images/rain.png)";
   } else if (weatherID >= 500 && weatherID < 600) {
     forecastImage.style.backgroundImage = "url(images/rain.png)";
   } else if (weatherID >= 600 && weatherID < 700) {

@@ -40,7 +40,8 @@ ul,
 }
 
 .weather-temperature,
-.weather-forecast {
+.weather-forecast,
+.search-button {
   text-align: center;
 }
 
@@ -125,20 +126,19 @@ h2 {
 
 .search-form {
   margin-bottom: 35px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
 }
 
 .city-input {
   width: 75%;
-  border-radius: 5px;
   display: block;
   margin: 0 auto;
 }
 
 .search-button {
-  width: 80%;
   margin-left: -60px;
-  border-radius: 4px;
-  background-color: rgb(79, 79, 79);
 }
 
 .temperature {
@@ -210,6 +210,9 @@ h2 {
   .recent-cities {
     font-size: 15.5px;
   }
+  #tokyo-button {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -226,13 +229,10 @@ h2 {
     font-size: 20px;
   }
   .recent-cities {
-    font-size: 14px;
+    font-size: 13px;
   }
   .city-input {
     width: 65%;
-  }
-  .search-button {
-    width: 90%;
   }
   .weather-temperature {
     margin-top: 0px;
@@ -262,7 +262,7 @@ h2 {
   }
   .recent-cities,
   .search-button {
-    font-size: 13px;
+    font-size: 12px;
   }
   .city-date,
   .weather-conditions {
@@ -274,15 +274,11 @@ h2 {
   .recent-cities {
     margin-right: 0px;
   }
-  #tokyo-button {
-    display: none;
-  }
   .city {
     margin-top: 30px;
   }
   .city-input {
     margin-left: 60px;
-    border-radius: 3px;
   }
   .search-button {
     margin-left: -47px;
@@ -324,7 +320,7 @@ h2 {
 
 @media screen and (max-width: 414px) {
   .recent-cities {
-    font-size: 12px;
+    font-size: 11px;
   }
   body {
     height: 900px;
@@ -333,7 +329,8 @@ h2 {
 
 @media screen and (max-width: 390px) {
   .recent-cities {
-    font-size: 11px;
+    font-size: 10px;
+    margin-right: -1px;
   }
   .search-button {
     margin-left: -40px;
@@ -354,6 +351,9 @@ h2 {
     font-size: 19px;
     padding: 12px 0 12px 0;
   }
+  #london-button {
+    display: none;
+  }
   .weather-app-wrapper {
     margin-top: 15px;
     max-width: 375px;
@@ -368,10 +368,8 @@ h2 {
     font-size: 17px;
   }
   .recent-cities {
-    font-size: 12px;
-  }
-  #london-button {
-    display: none;
+    font-size: 11px;
+    margin-right: -3px;
   }
   .city-input {
     margin-left: 50px;
@@ -380,7 +378,6 @@ h2 {
     font-size: 13px;
     margin-left: -37px;
     margin-top: 3px;
-    padding-left: 3px;
   }
   .city-date {
     margin-top: -50px;
@@ -431,18 +428,14 @@ h2 {
     font-size: 13px;
   }
   .recent-cities {
-    font-size: 11px;
+    font-size: 10px;
     margin-right: -5px;
-  }
-  #tokyo-button {
-    display: none;
   }
   .city-input {
     width: 60%;
     height: 90%;
     margin-left: 40px;
     margin-top: 2px;
-    border-radius: 3px;
   }
   .search-button {
     margin-left: -50px;
@@ -467,6 +460,9 @@ h2 {
   .date-format {
     font-size: 14px;
   }
+  #saopaulo-button {
+    display: none;
+  }
   .weather-app-wrapper {
     max-width: 310px;
   }
@@ -482,14 +478,10 @@ h2 {
   .search-button {
     font-size: 9px;
   }
-  .recent-cities {
-    margin-right: -5px;
-  }
   .city-input {
     width: 70%;
     margin-left: 25px;
     margin-top: 2px;
-    border-radius: 2px;
   }
   .search-button {
     margin-left: -40px;

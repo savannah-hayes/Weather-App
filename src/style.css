@@ -132,9 +132,6 @@ h2 {
   width: 75%;
   display: block;
   margin: 0 auto;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
 }
 
 .search-button {
@@ -219,6 +216,9 @@ h2 {
   .recent-cities {
     font-size: 15px;
   }
+  .search-button {
+    margin-left: -55px;
+  }
 }
 
 @media screen and (max-width: 575px) {
@@ -232,7 +232,7 @@ h2 {
     font-size: 13px;
   }
   .city-input {
-    width: 65%;
+    width: 70%;
   }
   .weather-temperature {
     margin-top: 0px;
@@ -254,8 +254,6 @@ h2 {
     max-width: 100%;
   }
   .forecast-icon,
-  .city-input,
-  .search-button,
   .city-date,
   .weather-temperature {
     position: relative;
@@ -278,11 +276,11 @@ h2 {
     margin-top: 30px;
   }
   .city-input {
-    margin-left: 60px;
+    margin-left: 45px;
   }
   .search-button {
-    margin-left: -47px;
-    margin-top: 2px;
+    margin-left: -40px;
+    margin-top: 3px;
   }
   .search-form {
     margin-top: 20px;
@@ -322,6 +320,10 @@ h2 {
   .recent-cities {
     font-size: 11px;
   }
+  .search-button {
+    margin-left: -35px;
+    margin-top: 3px;
+  }
   body {
     height: 900px;
   }
@@ -333,7 +335,7 @@ h2 {
     margin-right: -3px;
   }
   .search-button {
-    margin-left: -40px;
+    margin-left: -30px;
   }
   .city-date {
     white-space: normal;
@@ -360,6 +362,16 @@ h2 {
   }
 }
 
+@media screen and (max-width: 375px) {
+  .recent-cities {
+    margin-right: -4px;
+  }
+  .weather-temperature {
+    margin-left: 140px;
+    margin-top: -70px;
+  }
+}
+
 @media screen and (max-width: 360px) {
   h2 {
     font-size: 17px;
@@ -373,7 +385,7 @@ h2 {
   }
   .search-button {
     font-size: 13px;
-    margin-left: -37px;
+    margin-left: -20px;
     margin-top: 3px;
   }
   .city-date {
@@ -429,16 +441,16 @@ h2 {
   }
   .recent-cities {
     font-size: 10px;
-    margin-right: -6px;
+    margin-right: -8px;
   }
   .city-input {
-    width: 60%;
+    width: 70%;
     height: 90%;
-    margin-left: 40px;
+    margin-left: 30px;
     margin-top: 2px;
   }
   .search-button {
-    margin-left: -50px;
+    margin-left: -30px;
     font-size: 10px;
   }
   .city {
@@ -476,13 +488,12 @@ h2 {
     font-size: 9px;
   }
   .city-input {
-    width: 70%;
-    margin-left: 25px;
+    width: 85%;
+    margin-left: 10px;
     margin-top: 2px;
   }
   .search-button {
-    margin-left: -40px;
-    padding: 3px 0px 3px 0px;
+    margin-left: -30px;
   }
   h1 {
     font-size: 19px;

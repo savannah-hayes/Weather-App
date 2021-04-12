@@ -206,19 +206,19 @@ h2 {
   box-shadow: 3px 5px 5px 3px grey;
 }
 
-@media screen and (max-width: 770px) {
+@media screen and (max-width: 768px) {
   .recent-cities {
     font-size: 15.5px;
   }
 }
 
-@media screen and (max-width: 605px) {
+@media screen and (max-width: 600px) {
   .recent-cities {
     font-size: 15px;
   }
 }
 
-@media screen and (max-width: 580px) {
+@media screen and (max-width: 575px) {
   h1 {
     font-size: 22px;
   }
@@ -247,7 +247,7 @@ h2 {
   }
 }
 
-@media screen and (max-width: 485px) {
+@media screen and (max-width: 480px) {
   .city-date,
   .weather-temperature,
   .temperature-description {
@@ -322,7 +322,7 @@ h2 {
   }
 }
 
-@media screen and (max-width: 415px) {
+@media screen and (max-width: 414px) {
   .recent-cities {
     font-size: 12px;
   }
@@ -331,7 +331,7 @@ h2 {
   }
 }
 
-@media screen and (max-width: 395px) {
+@media screen and (max-width: 390px) {
   .recent-cities {
     font-size: 11px;
   }
@@ -363,9 +363,12 @@ h2 {
   }
 }
 
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 360px) {
+  h2 {
+    font-size: 17px;
+  }
   .recent-cities {
-    font-size: 13px;
+    font-size: 12px;
   }
   #london-button {
     display: none;
@@ -392,18 +395,6 @@ h2 {
     height: 170px;
     width: 170px;
   }
-  .weather-app-wrapper {
-    max-width: 350px;
-  }
-}
-
-@media screen and (max-width: 365px) {
-  h2 {
-    font-size: 17px;
-  }
-  .recent-cities {
-    font-size: 12px;
-  }
   .weather-description {
     font-size: 14px;
   }
@@ -421,7 +412,7 @@ h2 {
   }
 }
 
-@media screen and (max-width: 325px) {
+@media screen and (max-width: 320px) {
   h2,
   .date-format {
     white-space: nowrap;
@@ -481,7 +472,7 @@ h2 {
   }
 }
 
-@media screen and (max-width: 285px) {
+@media screen and (max-width: 280px) {
   .weather-forecast-date,
   .weather-forecast-temperatures,
   .date-format {

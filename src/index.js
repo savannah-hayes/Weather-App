@@ -316,7 +316,7 @@ function convertForecastTemp(unit) {
   }
 }
 
-// Event Listeners
+// Event Listeners and global variables
 let celsiusTemperature = null;
 let celsiusFeels = null;
 

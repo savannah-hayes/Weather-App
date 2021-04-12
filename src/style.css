@@ -1,6 +1,19 @@
 h1,
 h2 {
-  font-weight: 600;
+  font-weight: 700;
+}
+
+.weather-forecast-temperatures,
+.weather-forecast-date,
+.weather-description,
+.temperature-description,
+.date-format {
+  font-size: 16px;
+}
+
+.hour-forecast,
+.forecast-icon {
+  font-size: 20px;
 }
 
 ul,
@@ -10,18 +23,20 @@ ul,
   padding: 0;
 }
 
-.city-buttons,
-.city-input {
-  display: block;
-  margin: 0 auto;
+.temperature-description,
+.city,
+.temperature-unit,
+.celsius-link,
+.fahrenheit-link {
+  position: relative;
 }
 
-.date-format,
-.weather-description {
-  list-style: none;
-  font-size: 16px;
-  height: 18px;
-  line-height: 19px;
+.city,
+.temperature-description,
+.city-buttons,
+.weather-forecast-temperatures,
+.weather-conditions {
+  white-space: nowrap;
 }
 
 .weather-temperature,
@@ -29,8 +44,16 @@ ul,
   text-align: center;
 }
 
+.search-form,
+.city,
+.hour-forecast {
+  margin-top: 25px;
+}
+
 .temperature-unit,
-.temperature-description {
+.temperature-description,
+.date-format,
+.weather-description {
   list-style: none;
 }
 
@@ -44,9 +67,32 @@ ul,
   color: white;
 }
 
+.weather-forecast,
+.fab {
+  color: black;
+}
+
+.celsius-link,
+.fahrenheit-link {
+  top: -22px;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.hour-forecast,
+.celsius-link,
+.fahrenheit-link {
+  font-weight: 900;
+}
+
+.weather-temperature,
+.weather-app {
+  border: transparent;
+}
+
 .weather-forecast-temperature-min,
 .weather-app-wrapper {
-  opacity: 0.6;
+  opacity: 0.5;
 }
 
 .city-date,
@@ -65,33 +111,32 @@ body {
 
 h1 {
   font-size: 24px;
-  line-height: 28px;
 }
 
 h2 {
-  font-size: 19px;
-  line-height: 21px;
+  font-size: 22px;
 }
 
 .recent-cities {
   border: none;
-  margin-right: 2px;
+  font-size: 16.5px;
   background-color: transparent;
 }
 
 .search-form {
-  margin-bottom: 30px;
-  margin-top: 25px;
+  margin-bottom: 35px;
 }
 
 .city-input {
   width: 75%;
+  border-radius: 5px;
+  display: block;
+  margin: 0 auto;
 }
 
 .search-button {
   width: 80%;
   margin-left: -60px;
-  border-color: transparent;
   border-radius: 4px;
   background-color: rgb(79, 79, 79);
 }
@@ -101,32 +146,15 @@ h2 {
   margin-right: -1px;
 }
 
-.city {
-  position: relative;
-  margin-top: 25px;
-  white-space: nowrap;
-}
-
 .weather-temperature {
   margin-top: -10px;
-  border: transparent;
   border-radius: 50%;
   width: 180px;
   height: 180px;
 }
 
 .temperature-unit {
-  position: relative;
   margin-top: 35px;
-}
-
-.celsius-link,
-.fahrenheit-link {
-  position: relative;
-  top: -22px;
-  font-size: 15px;
-  font-weight: 900;
-  text-decoration: none;
 }
 
 .weather-temperature .active {
@@ -135,11 +163,7 @@ h2 {
 }
 
 .temperature-description {
-  font-size: 16px;
-  position: relative;
-  justify-content: center;
-  margin-top: -5px;
-  white-space: nowrap;
+  margin-top: -3px;
 }
 
 .temperature-description::first-letter {
@@ -151,35 +175,18 @@ h2 {
   text-align: right;
 }
 
-.weather-description {
-  font-size: 16px;
-}
-
 .hour-forecast {
-  font-weight: 900;
-  font-size: large;
-  margin-top: 25px;
-  margin-bottom: -10px;
+  margin-bottom: -5px;
 }
 
 .weather-forecast {
   margin-top: 30px;
   margin-bottom: 15px;
-  color: black;
-}
-
-.weather-forecast-date {
-  font-size: 16px;
 }
 
 .forecast-icon {
-  margin: 10px;
-  font-size: 20px;
+  padding: 15px 0px 15px 0px;
   opacity: 0.8;
-}
-
-.weather-forecast-temperatures {
-  font-size: 16px;
 }
 
 .github-link {
@@ -187,14 +194,8 @@ h2 {
   margin-left: 12px;
 }
 
-.fab {
-  color: black;
-}
-
 .weather-app {
   padding: 20px;
-  border-radius: 4px;
-  border: transparent;
 }
 
 .weather-app-wrapper {
@@ -206,61 +207,40 @@ h2 {
 }
 
 @media screen and (max-width: 768px) {
-  .city-buttons {
-    white-space: nowrap;
+  .recent-cities {
+    font-size: 15.5px;
   }
+}
+
+@media screen and (max-width: 600px) {
   .recent-cities {
     font-size: 15px;
-  }
-  .city {
-    position: relative;
-    margin-top: 30px;
-    white-space: no-wrap;
-  }
-  .weather-conditions {
-    margin-top: 30px;
-  }
-  .weather-forecast-temperatures {
-    white-space: nowrap;
   }
 }
 
 @media screen and (max-width: 575px) {
-  .city-buttons {
-    white-space: nowrap;
+  h1 {
+    font-size: 22px;
+  }
+  h2 {
+    font-size: 20px;
   }
   .recent-cities {
-    font-size: 13px;
+    font-size: 14px;
   }
   .city-input {
     width: 65%;
   }
   .search-button {
-    width: 100%;
-  }
-  .city {
-    position: relative;
-    margin-top: 25px;
-    white-space: normal;
-  }
-  .temperature-unit {
-    position: relative;
-    margin-top: 27px;
-  }
-  .weather-conditions {
-    white-space: nowrap;
-    margin-top: 35px;
+    width: 90%;
   }
   .weather-temperature {
-    margin-top: 10px;
+    margin-top: 0px;
+    width: 155px;
+    height: 155px;
   }
-  .weather-temperature {
-    position: relative;
-    margin-top: 5px;
-    height: 150px;
-  }
-  .weather-forecast-temperatures {
-    white-space: nowrap;
+  .temperature-description {
+    margin-top: -7px;
   }
   .weather-app-wrapper {
     max-width: 480px;
@@ -273,227 +253,219 @@ h2 {
   .temperature-description {
     max-width: 100%;
   }
-  .city-buttons {
-    white-space: nowrap;
+  .forecast-icon,
+  .city-input,
+  .search-button,
+  .city-date,
+  .weather-temperature {
+    position: relative;
+  }
+  .recent-cities,
+  .search-button {
+    font-size: 13px;
+  }
+  .city-date,
+  .weather-conditions {
+    text-align: left;
+  }
+  h2 {
+    font-size: 18px;
   }
   .recent-cities {
-    font-size: 10px;
+    margin-right: 0px;
+  }
+  #tokyo-button {
+    display: none;
+  }
+  .city {
+    margin-top: 30px;
   }
   .city-input {
-    width: 70%;
-    position: relative;
-    margin-left: 50px;
+    margin-left: 60px;
+    border-radius: 3px;
   }
   .search-button {
-    position: relative;
-    margin-left: -40px;
-    font-size: x-small;
-    margin-top: 0px;
+    margin-left: -47px;
+    margin-top: 2px;
   }
   .search-form {
-    margin-top: 14px;
+    margin-top: 20px;
     margin-bottom: 55px;
   }
   .weather-conditions {
-    text-align: left;
     margin-top: -85px;
-    white-space: nowrap;
   }
   .city-date {
-    text-align: left;
-    position: relative;
     margin-top: -65px;
-    white-space: normal;
+    margin-bottom: 5px;
   }
   .weather-temperature {
-    position: relative;
     margin-left: 160px;
-    margin-top: -45px;
-    height: 170px;
-    width: 170px;
+    margin-top: -80px;
+    height: 180px;
+    width: 180px;
   }
   .temperature-description {
-    margin-top: 0px;
+    margin-top: -3px;
   }
   .hour-forecast {
     text-align: center;
   }
-  h2 {
-    font-size: 14px;
-    margin-bottom: 0px;
-  }
   .weather-description {
-    font-size: 13px;
-  }
-  .forecast-icon {
-    position: relative;
-    display: block;
-    margin: 0 auto;
-    padding: 8px 0 8px 0;
+    font-size: 15px;
   }
   .weather-app-wrapper {
-    padding: 0;
-    margin-top: 10px;
     max-width: 400px;
   }
   body {
-    height: 960px;
+    height: 940px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .recent-cities {
+    font-size: 12px;
+  }
+  body {
+    height: 900px;
   }
 }
 
 @media screen and (max-width: 390px) {
-  .city-date,
-  .weather-temperature,
-  .temperature-description {
-    max-width: 100%;
-  }
-  .city-buttons {
-    white-space: nowrap;
-  }
   .recent-cities {
-    font-size: 8px;
-  }
-  .city-input {
-    width: 70%;
-    position: relative;
-    margin-left: 40px;
+    font-size: 11px;
   }
   .search-button {
-    position: relative;
     margin-left: -40px;
-    font-size: 14px;
-    margin-top: 2px;
-  }
-  .search-form {
-    margin-top: 14px;
-    margin-bottom: 40px;
-  }
-  .weather-conditions {
-    text-align: left;
-    margin-top: -80px;
-    white-space: nowrap;
   }
   .city-date {
-    text-align: left;
-    position: relative;
-    margin-top: -50px;
     white-space: normal;
-  }
-  .weather-temperature {
-    position: relative;
-    margin-left: 145px;
-    margin-top: -45px;
-    height: 170px;
-    width: 170px;
+    margin-top: -65px;
+    margin-bottom: -10px;
   }
   .temperature-description {
     margin-top: -8px;
   }
-  .hour-forecast {
-    text-align: center;
-  }
-  .weather-forecast-temperatures {
-    white-space: nowrap;
+  .weather-temperature {
+    margin-left: 155px;
+    margin-top: -70px;
   }
   .forecast-icon {
-    position: relative;
-    display: block;
-    margin: 0 auto;
-    padding: 7px 0 7px 0;
+    font-size: 19px;
+    padding: 12px 0 12px 0;
   }
   .weather-app-wrapper {
-    padding: 0;
-    margin-top: 10px;
-    max-width: 380px;
+    margin-top: 15px;
+    max-width: 375px;
+  }
+  body {
+    height: 850px;
   }
 }
 
 @media screen and (max-width: 360px) {
-  .city-date,
-  .weather-temperature,
-  .temperature-description {
-    max-width: 100%;
+  h2 {
+    font-size: 17px;
   }
-  .city-buttons {
-    white-space: nowrap;
+  .recent-cities {
+    font-size: 12px;
+  }
+  #london-button {
+    display: none;
+  }
+  .city-input {
+    margin-left: 50px;
+  }
+  .search-button {
+    font-size: 13px;
+    margin-left: -37px;
+    margin-top: 3px;
+    padding-left: 3px;
   }
   .city-date {
-    text-align: left;
-    position: relative;
     margin-top: -50px;
     margin-bottom: 10px;
-    white-space: normal;
   }
   .weather-conditions {
-    text-align: left;
-    margin-top: -70px;
-    white-space: nowrap;
+    margin-top: -80px;
   }
   .weather-temperature {
-    position: relative;
-    margin-left: 145px;
-    margin-top: -70px;
+    margin-left: 140px;
+    margin-top: -84px;
     height: 170px;
     width: 170px;
   }
-  h2 {
-    font-size: 14px;
-    margin-bottom: 0px;
-  }
   .weather-description {
-    font-size: 13px;
+    font-size: 14px;
   }
   .weather-forecast-temperatures {
     white-space: normal;
+  }
+  .forecast-icon {
+    font-size: 18px;
   }
   .weather-app-wrapper {
     max-width: 340px;
   }
   body {
-    height: 750px;
+    height: 895px;
   }
 }
 
 @media screen and (max-width: 320px) {
-  .city-buttons {
+  h2,
+  .date-format {
     white-space: nowrap;
   }
+  h1,
+  h2 {
+    margin-bottom: 5px;
+  }
+  h1 {
+    font-size: 22px;
+  }
+  h2 {
+    font-size: 14px;
+  }
+  .weather-description {
+    font-size: 13px;
+  }
   .recent-cities {
-    font-size: 8px;
+    font-size: 11px;
     margin-right: -5px;
+  }
+  #tokyo-button {
+    display: none;
   }
   .city-input {
     width: 60%;
     height: 90%;
-    position: relative;
     margin-left: 40px;
     margin-top: 2px;
+    border-radius: 3px;
   }
   .search-button {
-    position: relative;
     margin-left: -50px;
-    font-size: x-small;
+    font-size: 10px;
+  }
+  .city {
+    margin-top: 20px;
+  }
+  .city-date {
+    margin-bottom: 0px;
   }
   .weather-conditions {
-    text-align: left;
     margin-top: -75px;
-    white-space: nowrap;
+    margin-top: -68px;
   }
   .weather-temperature {
-    position: relative;
-    margin-left: 125px;
-    margin-top: -50px;
-    height: 150px;
-    width: 150px;
+    margin-left: 115px;
+    margin-top: -70px;
+    height: 155px;
+    width: 155px;
   }
-  .weather-forecast-temperatures {
-    white-space: normal;
-  }
-  .forecast-icon {
-    position: relative;
-    display: block;
-    margin: 0 auto;
-    padding: 8px 0 8px 0;
+  .date-format {
+    font-size: 14px;
   }
   .weather-app-wrapper {
     max-width: 310px;
@@ -501,31 +473,36 @@ h2 {
 }
 
 @media screen and (max-width: 280px) {
-  h1 {
-    font-size: 17px;
+  .weather-forecast-date,
+  .weather-forecast-temperatures,
+  .date-format {
+    font-size: 13px;
   }
-  .city-buttons {
-    white-space: nowrap;
+  .recent-cities,
+  .search-button {
+    font-size: 9px;
   }
   .recent-cities {
-    font-size: 6px;
     margin-right: -5px;
   }
   .city-input {
     width: 70%;
-    height: 80%;
-    position: relative;
-    margin-left: 20px;
+    margin-left: 25px;
     margin-top: 2px;
+    border-radius: 2px;
   }
   .search-button {
-    position: relative;
-    margin-left: -45px;
-    font-size: x-small;
-    padding: 0 8px 0 0px;
+    margin-left: -40px;
+    padding: 3px 0px 3px 0px;
   }
-  .date-format {
-    font-size: 12px;
+  h1 {
+    font-size: 19px;
+  }
+  h2 {
+    display: none;
+  }
+  .city {
+    margin-bottom: 10px;
   }
   .weather-forecast-temperatures {
     white-space: normal;
@@ -535,26 +512,24 @@ h2 {
     margin-left: 10px;
   }
   .weather-temperature {
-    position: relative;
-    margin-left: 115px;
-    margin-top: -50px;
-    height: 120px;
-    width: 120px;
+    margin-left: 105px;
+    height: 130px;
+    width: 130px;
   }
   .celsius-link,
   .fahrenheit-link {
-    position: relative;
     top: -13px;
     font-size: 8px;
-    font-weight: 900;
-    text-decoration: none;
   }
   .temperature-description {
     font-size: 12px;
     margin-top: 8px;
   }
   .weather-conditions {
-    margin-top: -40px;
+    margin-top: -45px;
+  }
+  .forecast-icon {
+    font-size: 16px;
   }
   .weather-app-wrapper {
     max-width: 280px;

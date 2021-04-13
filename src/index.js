@@ -88,7 +88,6 @@ function search(city) {
 
   celsiusLink.classList.add("active");
   fahrenheitLink.classList.remove("active");
-
   celsiusLink.removeEventListener("click", displayCelsiusTemperature);
   fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 }

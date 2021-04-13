@@ -40,8 +40,7 @@ ul,
 }
 
 .weather-temperature,
-.weather-forecast,
-.search-button {
+.weather-forecast {
   text-align: center;
 }
 
@@ -119,18 +118,21 @@ h2 {
   background-color: transparent;
 }
 
-.search-form {
+.input-group {
   margin-bottom: 35px;
+  justify-content: center;
+}
+
+.form-outline {
+  width: 55%;
 }
 
 .city-input {
-  width: 75%;
-  display: block;
-  margin: 0 auto;
+  border: 1px solid black;
 }
 
 .search-button {
-  margin-left: -60px;
+  margin-left: 10px;
 }
 
 .temperature {
@@ -182,7 +184,7 @@ h2 {
 
 .forecast-icon {
   padding: 15px 0px 15px 0px;
-  opacity: 0.8;
+  opacity: 0.7;
 }
 
 .github-link {
@@ -199,7 +201,7 @@ h2 {
   margin: 30px auto;
   background-color: white;
   border-radius: 25px;
-  opacity: 0.8;
+  opacity: 0.9;
   box-shadow: 3px 5px 5px 3px grey;
 }
 
@@ -216,9 +218,6 @@ h2 {
   .recent-cities {
     font-size: 15px;
   }
-  .search-button {
-    margin-left: -55px;
-  }
 }
 
 @media screen and (max-width: 575px) {
@@ -230,9 +229,6 @@ h2 {
   }
   .recent-cities {
     font-size: 13px;
-  }
-  .city-input {
-    width: 70%;
   }
   .weather-temperature {
     margin-top: 0px;
@@ -258,10 +254,6 @@ h2 {
   .weather-temperature {
     position: relative;
   }
-  .recent-cities,
-  .search-button {
-    font-size: 12px;
-  }
   .city-date,
   .weather-conditions {
     text-align: left;
@@ -271,20 +263,20 @@ h2 {
   }
   .recent-cities {
     margin-right: 0px;
+    font-size: 12px;
   }
   .city {
     margin-top: 30px;
   }
+  .search-form {
+    margin-top: 25px;
+    margin-bottom: 60px;
+  }
   .city-input {
-    margin-left: 45px;
+    padding: 4px 4px;
   }
   .search-button {
-    margin-left: -40px;
-    margin-top: 3px;
-  }
-  .search-form {
-    margin-top: 20px;
-    margin-bottom: 55px;
+    padding: 4px 4px;
   }
   .weather-conditions {
     margin-top: -85px;
@@ -320,10 +312,6 @@ h2 {
   .recent-cities {
     font-size: 11px;
   }
-  .search-button {
-    margin-left: -35px;
-    margin-top: 3px;
-  }
   body {
     height: 900px;
   }
@@ -333,9 +321,6 @@ h2 {
   .recent-cities {
     font-size: 10px;
     margin-right: -3px;
-  }
-  .search-button {
-    margin-left: -30px;
   }
   .city-date {
     white-space: normal;
@@ -379,14 +364,6 @@ h2 {
   .recent-cities {
     font-size: 12px;
     margin-right: -3px;
-  }
-  .city-input {
-    margin-left: 50px;
-  }
-  .search-button {
-    font-size: 13px;
-    margin-left: -20px;
-    margin-top: 3px;
   }
   .city-date {
     margin-top: -50px;
@@ -442,16 +419,6 @@ h2 {
   .recent-cities {
     font-size: 10px;
     margin-right: -8px;
-  }
-  .city-input {
-    width: 70%;
-    height: 90%;
-    margin-left: 30px;
-    margin-top: 2px;
-  }
-  .search-button {
-    margin-left: -30px;
-    font-size: 10px;
   }
   .city {
     margin-top: 20px;

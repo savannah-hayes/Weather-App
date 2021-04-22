@@ -1,4 +1,3 @@
-// Local Date and Hour
 function formatDate(date, timezone) {
   let localOffsetInMs = date.getTimezoneOffset() * 60 * 1000;
   let targetOffsetInMs = timezone * 1000;
@@ -92,7 +91,6 @@ function search(city) {
   fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 }
 
-// form
 function handleSubmit(event) {
   event.preventDefault();
   let cityInputElement = document.querySelector("#city-input");
@@ -159,7 +157,6 @@ function getForecast(latitude, longitude) {
   axios.get(apiUrl).then(displayForecast);
 }
 
-// Display temperature, time, date and descriptions
 function displayWeatherCondition(response) {
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
@@ -210,7 +207,6 @@ function displayWeatherCondition(response) {
   getForecast(latitude, longitude);
 }
 
-// recent city search buttons
 function tokyo(event) {
   event.preventDefault();
   search("Tokyo");
@@ -249,7 +245,6 @@ function london(event) {
 }
 document.querySelector("#london-button").addEventListener("click", london);
 
-// Convert fahrenheit to celsius
 function displayCelsiusTemperature(event) {
   event.preventDefault();
   document.querySelector("#temperature").innerHTML = Math.round(
@@ -266,7 +261,6 @@ function displayCelsiusTemperature(event) {
   fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 }
 
-// convert celsius to fahrenheit
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
   let temperatureElemement = document.querySelector("#temperature");
@@ -285,7 +279,6 @@ function displayFahrenheitTemperature(event) {
   fahrenheitLink.removeEventListener("click", displayFahrenheitTemperature);
 }
 
-// Convert forecast max and min temp
 function convertForecastTemp(unit) {
   let forecastMax = document.querySelectorAll(
     ".weather-forecast-temperature-max"
@@ -315,7 +308,6 @@ function convertForecastTemp(unit) {
   }
 }
 
-// Event Listeners and global variables
 let celsiusTemperature = null;
 let celsiusFeels = null;
 

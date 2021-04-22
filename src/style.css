@@ -100,7 +100,6 @@ body {
   background-image: url("https://i.pinimg.com/564x/ee/c4/16/eec4169c5e89189f59d86f21829e0454.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  height: 1024px;
   font-family: "Barlow", sans-serif;
 }
 
@@ -201,7 +200,6 @@ h2 {
   margin: 30px auto;
   background-color: white;
   border-radius: 25px;
-  opacity: 0.9;
   box-shadow: 3px 5px 5px 3px grey;
 }
 
